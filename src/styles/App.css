@@ -1,0 +1,122 @@
+body {
+    text-align: center;
+    margin: 20px;
+}
+
+.app {
+    background: url("../img/bg.jpg") rgb(230, 230, 120);
+    background-size: 1000px 450px;
+    display: inline-flex;
+    flex-direction: column;
+    padding: 0 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    overflow: hidden;
+    animation: animation-move 10s linear infinite alternate-reverse;
+}
+
+@keyframes animation-move {
+    0% {
+        background-position-x: 0px;
+    }
+    10% {
+        background-position-x: 0px;
+    }
+    90% {
+        background-position-x: -50px;
+    }
+    100% {
+        background-position-x: -50px;
+    }
+}
+
+.app h1 {
+    font-size: 24px;
+    color: rgb(250, 249, 202);
+    text-shadow: 0 0 5px black;
+}
+.find {
+    margin-bottom: 20px;
+}
+.find > form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.find button {
+    background: rgb(82, 82, 216);
+    border: 1px solid transparent;
+    color: white;
+    padding: 0px 15px;
+    border-radius: 0px 8px 8px 0px;
+    width: 35%;
+    height: 32px;
+    transition: 0.5s;
+}
+
+.find button:hover {
+    background: rgb(63, 63, 168);
+    box-shadow: 0 0 2px black;
+    color: rgb(236, 253, 188);
+}
+
+.find input {
+    border: 1px transparent;
+    width: 65%;
+    border-radius: 8px 0px 0px 8px;
+    outline: none;
+    transition: 0.5s;
+    text-align: center;
+}
+.valid:focus,
+.invalid:focus {
+    box-shadow: 0 0 2px black;
+}
+.valid:focus {
+    background: rgb(205, 229, 137);
+}
+.invalid:focus {
+    background: rgb(255, 95, 95);
+}
+.valid {
+    background: rgb(236, 253, 188);
+}
+.invalid {
+    background: rgb(255, 142, 142);
+}
+.info {
+    position: relative;
+    text-align: left;
+    height: 0;
+    transition: 0.2s;
+    text-shadow: 1px 1px 5px black;
+}
+
+.info div {
+    color: white;
+    margin: 0px 0px 10px 0px;
+    opacity: 1;
+}
+.info div:first-child {
+    margin-top: 0px;
+}
+
+.location p,
+.temperature p,
+.rain p,
+.mood p,
+.wind p {
+    display: inline;
+    color: rgb(236, 253, 188);
+    padding-left: 10px;
+    text-shadow: 1px 1px 0px 2px black;
+}
+.hidden {
+    display: none;
+}
+
+.error {
+    background: rgb(252, 146, 146);
+}
